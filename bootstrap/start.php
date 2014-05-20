@@ -36,7 +36,7 @@ $env = $app->detectEnvironment([
         'arkadeloyaltyplatform'         // CentOS Vagrant VM
     ],
     'staging' => [
-        'ip-172-31-5-68'                // Amazon EC2 instance hostname
+        'ip-172-31-15-117'                // Amazon EC2 instance hostname
     ]
 ]);
 
