@@ -24,11 +24,21 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
+$env = $app->detectEnvironment([
 
-	'local' => array('your-machine-name'),
 
-));
+    'testing' => [
+        '*.testing'
+    ],
+    'local' => [
+        'PaulG-MacBook-Pro.local',      // Paul G
+        'TK-429',                       // Andy
+        'arkadeloyaltyplatform'         // CentOS Vagrant VM
+    ],
+    'staging' => [
+        'ip-172-31-5-68'                // Amazon EC2 instance hostname
+    ]
+]);
 
 /*
 |--------------------------------------------------------------------------
@@ -54,8 +64,7 @@ $app->bindInstallPaths(require __DIR__.'/paths.php');
 |
 */
 
-$framework = $app['path.base'].
-                 '/vendor/laravel/framework/src';
+$framework = $app['path.base'].'/vendor/laravel/framework/src';
 
 require $framework.'/Illuminate/Foundation/start.php';
 

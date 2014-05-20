@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'default' => 'sync',
+	'default' => 'iron',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -38,7 +38,6 @@ return array(
 			'driver' => 'beanstalkd',
 			'host'   => 'localhost',
 			'queue'  => 'default',
-			'ttr'    => 60,
 		),
 
 		'sqs' => array(
@@ -51,10 +50,9 @@ return array(
 
 		'iron' => array(
 			'driver'  => 'iron',
-			'host'    => 'mq-aws-us-east-1.iron.io',
-			'token'   => 'your-token',
-			'project' => 'your-project-id',
-			'queue'   => 'your-queue-name',
+			'project' => $_ENV['IRON_PROJECT_ID'],
+			'token'   => $_ENV['IRON_TOKEN'],
+			'queue'   => $_ENV['IRON_QUEUE'],
 		),
 
 		'redis' => array(
