@@ -16,19 +16,19 @@
  * TEST COMMANDS
  */
 
-Artisan::add(new TestCommand);
-Artisan::add(new FakerTestCommand);
+//Artisan::add(new TestCommand);
+//Artisan::add(new FakerTestCommand);
 
 
 /**
  * CRONS
  */
 
-Artisan::add(new DailyCronCommand);
-Artisan::add(new HourlyCronCommand);
-Artisan::add(new MinuteCronCommand);
+//Artisan::add(new DailyCronCommand);
+//Artisan::add(new HourlyCronCommand);
+//Artisan::add(new MinuteCronCommand);
 
 /**
  * DATABASE
  */
-Artisan::add(new UpdateDBIndexesCommand); // Runs once daily under DailyCronCommand
+//Artisan::add(new UpdateDBIndexesCommand); // Runs once daily under DailyCronCommand
